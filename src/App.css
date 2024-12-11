@@ -1,31 +1,47 @@
 .App {
   text-align: center;
+  padding: 1rem; /* Added padding for spacing */
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  transition: transform 0.3s ease; /* Added smooth transition for any transformations */
+}
+
+.App-logo:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 15s linear; /* Reduced duration for faster spin */
   }
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #20232a; /* Slightly darker background for better contrast */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(12px + 2vmin); /* Increased base font size */
+  color: #e1e1e1; /* Light gray for improved readability */
+  padding: 2rem; /* Added padding for layout spacing */
+  gap: 1rem; /* Spacing between child elements */
 }
 
 .App-link {
   color: #61dafb;
+  text-decoration: none;
+  font-weight: bold; /* Enhanced link visibility */
+  transition: color 0.3s ease; /* Smooth hover effect */
+
+  &:hover {
+    color: #21a1f1; /* Darker blue on hover */
+    text-decoration: underline; /* Underline on hover for better indication */
+  }
 }
 
 @keyframes App-logo-spin {
