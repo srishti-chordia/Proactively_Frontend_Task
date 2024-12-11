@@ -1,0 +1,20 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333; /* Set text color */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; /* Ensure full screen height */
+  justify-content: center;   /* Center content vertically */
+  padding: 20px;   /* Add padding around content */
+  background-color: #ffffff; /* White background for content area */
+  border-radius: 8px;   /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   /* Add subtle shadow for depth */
+}

@@ -1,0 +1,110 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  /* Make navbar sticky */
+  top: 0;
+  z-index: 1000;
+
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    img {
+      width: 40px;
+      height: auto;
+    }
+
+    span {
+      font-size: 1.6rem;
+      /* Slightly larger font size */
+      font-weight: bold;
+      color: #333;
+    }
+  }
+
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    li {
+      list-style: none;
+      font-size: 1rem;
+      cursor: pointer;
+      color: #666;
+      /* Slightly darker text color for better readability */
+      transition: color 0.2s ease;
+      /* Smooth hover effect */
+
+      &:hover {
+        color: #007bff;
+      }
+
+      &.dropdown {
+        position: relative;
+
+        .dropdown-menu {
+          position: absolute;
+          top: 50px;
+          /* Adjusted for better spacing */
+          right: 0;
+          background-color: white;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          /* Enhanced shadow */
+          border-radius: 8px;
+          padding: 1rem;
+          z-index: 10;
+          width: 240px;
+          /* Slightly larger width for content */
+
+          .dropdown-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0.75rem;
+            /* Increased padding for better spacing */
+            border-radius: 4px;
+            /* Add a slight rounding for each item */
+            transition: background-color 0.2s ease;
+
+            strong {
+              font-weight: bold;
+              margin-right: 1rem;
+              color: #000;
+            }
+
+            a {
+              color: #007bff;
+              text-decoration: none;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+
+            &:hover {
+              background-color: #f4f4f4;
+              /* Subtle background on hover */
+            }
+
+            &:not(:last-child) {
+              border-bottom: 1px solid #eaeaea;
+            }
+          }
+        }
+      }
+    }
+
+    .separator {
+      width: 1px;
+      height: 20px;
+      background-color: #ccc;
+    }
+  }
+}

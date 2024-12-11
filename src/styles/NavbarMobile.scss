@@ -1,0 +1,108 @@
+.navbar-mobile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  .navbar-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    img {
+      width: 40px;
+      height: auto;
+    }
+
+    span {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .hamburger-menu {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #333;
+    }
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    padding: 1rem;
+
+    &.active {
+      display: flex;
+    }
+
+    .dropdown {
+      display: flex;
+      flex-direction: column;
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5rem;
+
+      .dropdown-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        strong {
+          color: #333;
+          font-size: 1rem;
+        }
+
+        a {
+          color: #007bff;
+          font-size: 0.9rem;
+          text-decoration: none;
+          margin-left: 3px; /* Reduced margin to shift left */
+          white-space: nowrap; /* Prevents breaking into a new line */
+          margin-right: 20px;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    li {
+      list-style: none;
+      font-size: 1rem;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        background: #f5f5f5;
+      }
+
+      svg {
+        font-size: 1rem;
+        color: #808080;
+        margin-left: 10px; /* Adds spacing between the arrow and edge */
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+.mobile-hero {
+    position: relative; /* Establishes a relative positioning context */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    background: #f9f9f9;
+  
+    .mobile-hero-content {
+      text-align: center;
+      margin-bottom: 1rem;
+  
+      h1 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+  
+        .highlight {
+          background: linear-gradient(90deg, #1173b3, #0cb9b3);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+  
+      p {
+        font-size: 0.9rem;
+        color: #555;
+      }
+    }
+  
+    .search-bar-wrapper {
+      position: relative; /* Allows the slant divider to align relative to this container */
+      z-index: 1; /* Ensures the search bar stays above the slant divider */
+      width: 100%;
+      max-width: 500px;
+  
+      .slant-divider {
+        position: absolute; /* Positioned within the relative container */
+        top: 50%; /* Centers the divider behind the search bar */
+        left: -10%; /* Extends beyond the left edge */
+        width: 120%; /* Extends beyond the right edge */
+        height: 50px; /* Adjust height for longer length */
+        background: linear-gradient(to right, #f0c971, #e5688c); /* Gradient styling */
+        z-index: -1; /* Places it behind the white search bar */
+        transform: translateY(-50%) skewY(-4deg); /* Centers vertically and slants it */
+        border-radius: 0; /* Removes rounded edges to make it uniform */
+      }
+      
+      
+      
+  
+      .search-bar {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        background: white;
+        padding: 1rem;
+        border-radius: 16px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+        .input-wrapper {
+          position: relative;
+          display: flex;
+          align-items: center;
+  
+          .icon {
+            position: absolute;
+            left: 1rem;
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+            pointer-events: none;
+          }
+  
+          input {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 3rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f5f5f5;
+            font-size: 0.9rem;
+          }
+        }
+  
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          padding: 0.75rem;
+          background: linear-gradient(to right, #4683d0, #7cd0a2);
+          border: none;
+          border-radius: 8px;
+          color: white;
+          font-size: 0.9rem;
+          cursor: pointer;
+  
+          .button-icon {
+            width: 20px;
+            height: 20px;
+          }
+  
+          &:hover {
+            background: linear-gradient(to right, #3a6eb5, #6bb693);
+          }
+        }
+      }
+    }
+  
+    .scrolling-images-mobile {
+      display: flex;
+      gap: 1rem;
+      overflow: hidden;
+      width: 100%;
+      margin-top: 1.5rem;
+  
+      img {
+        flex-shrink: 0;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 16px;
+        animation: scroll-right-to-left 15s linear infinite;
+      }
+    }
+  
+    @keyframes scroll-right-to-left {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  }
+  

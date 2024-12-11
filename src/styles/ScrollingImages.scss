@@ -1,0 +1,182 @@
+.hero {
+  position: relative;
+  background: #f9f9f9;
+  padding: 1rem 0; /* Reduced padding to minimize white space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the top */
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .scrolling-images {
+    display: flex;
+    gap: 1rem; /* Gap between columns */
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem; /* Gap between images */
+      overflow: hidden;
+      height: 600px; /* Adjusted height */
+      width: 247px;
+
+      img {
+        width: 100%;
+        max-width: 250px;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 16px;
+        margin-bottom: 2rem;
+        animation-duration: 8s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+
+
+      &.column-1 img {
+        animation: scroll-top-to-bottom 10s linear infinite;
+      }
+
+      &.column-2 img {
+        animation: scroll-bottom-to-top 10s linear infinite;
+      }
+    }
+  }
+
+  .hero-content {
+    text-align: left;
+    max-width: 500px; /* Adjusted to reduce white space */
+    margin-left: -6rem; /* Shift left to cover more white space */
+    margin-right: 6rem;
+    margin-top: 4rem;
+
+    h1 {
+      font-size: 2.5rem; /* Adjusted font size */
+      line-height: 1.3;
+      font-weight: 600;
+
+      .highlight {
+        background: linear-gradient(90deg, #1173b3, #0cb9b3);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    p {
+      margin-top: 0.75rem; /* Reduced spacing below heading */
+      font-size: 1rem;
+      color: #555;
+    }
+  }
+
+  
+
+  .search-bar-wrapper {
+    position: absolute;
+    top: 65%; /* Positioned slightly lower */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 100%;
+    max-width: 1000px;
+  
+    .search-bar {
+      display: flex;
+      gap: 1rem;
+      background: white;
+      padding: 1.5rem; /* Increased padding for taller search bar */
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+      .input-wrapper {
+        position: relative;
+        flex: 1;
+        display: flex;
+        align-items: center;
+  
+        .icon {
+          position: absolute;
+          left: 1rem;
+          width: 20px; /* Icon size */
+          height: 20px;
+          object-fit: contain;
+          pointer-events: none; /* Ensure icon doesn’t interfere with input clicks */
+        }
+  
+        input {
+          width: 100%;
+          padding: 0.75rem 1rem 0.75rem 3rem; /* Add padding for the icon */
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          font-size: 1rem;
+          background-color: #f5f5f5; /* Light grey background */
+        }
+      }
+  
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem; /* Spacing between text and icon */
+        padding: 1rem 1.75rem;
+        background: linear-gradient(to right,  #4683D0, #7CD0A2);
+        border: none;
+        border-radius: 8px;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+  
+        .button-icon {
+          width: 20px; /* Adjust button icon size */
+          height: 20px;
+          object-fit: contain;
+        }
+  
+        &:hover {
+          background: linear-gradient(to right,  #3A6EB5, #6BB693);
+        }
+      }
+    }
+  }
+  
+  
+
+  .slant-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to right, #f0c971, #e5688c);
+    transform: skewY(-3deg);
+    z-index: 1;
+  }
+
+  
+}
+
+/* Animations */
+@keyframes scroll-top-to-bottom {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes scroll-bottom-to-top {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
