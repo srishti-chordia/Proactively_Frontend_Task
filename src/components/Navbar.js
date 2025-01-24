@@ -13,7 +13,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-logo">
         <img src={logo} alt="ProVital Logo" />
-        <span>ProVital</span>
+        <span>Soul Spark</span>
       </div>
       <ul className="navbar-links">
         <li>List your practice</li>
