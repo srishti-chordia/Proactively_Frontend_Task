@@ -15,7 +15,7 @@ function NavbarMobile() {
       {/* Logo Section */}
       <div className="navbar-logo">
         <img src={logo} alt="ProVital Logo" />
-        <span>SoulSpark</span>
+        <span>Soul Spark</span>
         <button className="hamburger-menu" onClick={toggleMenu}>
           {menuOpen ? "✖" : "☰"}
         </button>
